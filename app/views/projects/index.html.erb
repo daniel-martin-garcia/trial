@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		h1 {color:blue; text-align: center;}
+	</style>
+</head>
+<body>
+	<h1>PROJECTS</h1>
+	<ul><% @project.each do |a| %>
+		<li>
+			<%= a.name %> 
+			<% if a.description != nil %>
+				-
+			<%= a.description %>
+			<% end %>
+		</li>
+
+		<% end %>
+		</ul>
+</body>
+</html>
