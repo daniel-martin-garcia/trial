@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+	has_many :entries
 	def self.iron_find(id)
 		project = where(id: id).first
 		unless project.present?

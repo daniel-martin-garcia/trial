@@ -5,6 +5,9 @@ class ProjectsController < ApplicationController
 	def show
 		@project = Project.find(params[:id])
 	rescue
-		render "error"
+		@project = Project.last_created_projects(10)
+		render "error", layout: "error"
+
+
 	end
 end
