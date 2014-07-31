@@ -5,8 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-project= Project.first
-project.entries.create hours: 50000, minutes:1, comments: "bla bla bla"
+project = Project.first
+project.entries.create hours: 50000, minutes:1, comments: "bla bla bla", date:"Tue, 27 Jul -2014"
+
 
 
 # entry = Entry.new
