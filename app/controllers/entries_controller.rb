@@ -2,7 +2,6 @@ class EntriesController < ApplicationController
 
 	def index
 		@project = Project.find params[:project_id]
-		@entries = @project.entries
 	end
 
 	def new
@@ -26,4 +25,5 @@ class EntriesController < ApplicationController
 	def entry_params
 		params.require(:entry).permit(:hours, :minutes, :date)
 	end
+
 end
